@@ -34,6 +34,9 @@ Feature: No Database
       gem "cucumber-rails", :group => :test, :path => "../../.."
       gem "capybara", :group => :test
       gem "rspec-rails", :group => :test
+      gem 'sass-rails', '~> 5.0'
+      gem 'uglifier', '>= 2.7.2'
+      gem 'jquery-rails'
       """
     And I write to "app/controllers/posts_controller.rb" with:
       """
