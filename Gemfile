@@ -5,3 +5,5 @@ source "https://rubygems.org"
 # excluded from Appraisal-generated gemfiles.
 
 gemspec
+# v0.6.2 with an unlock for rack 2
+gem 'bcat', github: 'mathieujobin/bcat', branch: 'rails5'
