@@ -1,0 +1,495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Cucumber::InstallGenerator
+  
+    &mdash; Documentation by YARD 0.9.3
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "Cucumber::InstallGenerator";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+
+    <div id="header">
+      <h3><img src="../images/bubble_32x32.png"></img> Cucumber-Rails 1.4.3</h3>
+
+      <div id="menu">
+  
+    <a href="../_index.html">Index (I)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Cucumber.html" title="Cucumber (module)">Cucumber</a></span></span>
+     &raquo; 
+    <span class="title">InstallGenerator</span>
+  
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Cucumber::InstallGenerator
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Rails::Generators::Base</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Rails::Generators::Base</li>
+          
+            <li class="next">Cucumber::InstallGenerator</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/generators/cucumber/install/install_generator.rb</dd>
+  </dl>
+  
+</div>
+
+
+  <h2>Constant Summary</h2>
+  <dl class="constants">
+    
+      <dt id="DEFAULT_SHEBANG-constant" class="">DEFAULT_SHEBANG =
+        
+      </dt>
+      <dd><pre class="code"><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='const'>RbConfig</span><span class='op'>::</span><span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>bindir</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='const'>RbConfig</span><span class='op'>::</span><span class='const'>CONFIG</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ruby_install_name</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span></pre></dd>
+    
+  </dl>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_database-instance_method" title="#create_database (instance method)">#<strong>create_database</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_feature_support-instance_method" title="#create_feature_support (instance method)">#<strong>create_feature_support</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_scripts-instance_method" title="#create_scripts (instance method)">#<strong>create_scripts</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_step_definitions-instance_method" title="#create_step_definitions (instance method)">#<strong>create_step_definitions</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_tasks-instance_method" title="#create_tasks (instance method)">#<strong>create_tasks</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_templates-instance_method" title="#create_templates (instance method)">#<strong>create_templates</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create_database-instance_method">
+  
+    #<strong>create_database</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/generators/cucumber/install/install_generator.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_database'>create_database</span>
+  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exist?'>exist?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>config/database.yml</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='kw'>unless</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>config/database.yml</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cucumber:</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_gsub_file'>gsub_file</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>config/database.yml</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^test:.*\n</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>test: &amp;test\n</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_gsub_file'>gsub_file</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>config/database.yml</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\z</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\ncucumber:\n  &lt;&lt;: *test\n</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='comment'># Since gsub_file doesn&#39;t ask the user, just inform user that the file was overwritten.
+</span>    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>       force  config/database.yml</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_feature_support-instance_method">
+  
+    #<strong>create_feature_support</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/generators/cucumber/install/install_generator.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_feature_support'>create_feature_support</span>
+  <span class='id identifier rubyid_empty_directory'>empty_directory</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>features/support</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_spork?'>spork?</span>
+    <span class='id identifier rubyid_template'>template</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>support/rails_spork.rb.erb</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>features/support/env.rb</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_template'>template</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>support/rails.rb.erb</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>       <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>features/support/env.rb</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_scripts-instance_method">
+  
+    #<strong>create_scripts</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/generators/cucumber/install/install_generator.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_scripts'>create_scripts</span>
+  <span class='id identifier rubyid_copy_file'>copy_file</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>script/cucumber</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>script/cucumber</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_chmod'>chmod</span>     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>script/cucumber</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>0755</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_step_definitions-instance_method">
+  
+    #<strong>create_step_definitions</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/generators/cucumber/install/install_generator.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_step_definitions'>create_step_definitions</span>
+  <span class='id identifier rubyid_empty_directory'>empty_directory</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>features/step_definitions</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_create_file'>create_file</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>features/step_definitions/.gitkeep</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_tasks-instance_method">
+  
+    #<strong>create_tasks</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/generators/cucumber/install/install_generator.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_tasks'>create_tasks</span>
+  <span class='id identifier rubyid_empty_directory'>empty_directory</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>lib/tasks</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_template'>template</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tasks/cucumber.rake.erb</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>lib/tasks/cucumber.rake</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_templates-instance_method">
+  
+    #<strong>create_templates</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/generators/cucumber/install/install_generator.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_templates'>create_templates</span>
+  <span class='id identifier rubyid_template'>template</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>config/cucumber.yml.erb</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>config/cucumber.yml</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Mon Jul 25 09:30:40 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.3 (ruby-2.3.1).
+</div>
+
+  </body>
+</html>

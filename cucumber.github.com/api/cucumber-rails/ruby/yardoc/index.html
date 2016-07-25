@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.3
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+
+    <div id="header">
+      <h3><img src="images/bubble_32x32.png"></img> Cucumber-Rails 1.4.3</h3>
+
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>Cucumber-Rails</h1>
+
+<p><a href="http://badge.fury.io/rb/cucumber-rails"><img src="https://badge.fury.io/rb/cucumber-rails.svg" alt="Gem Version" /></a>
+<a href="http://travis-ci.org/cucumber/cucumber-rails"><img src="https://secure.travis-ci.org/cucumber/cucumber-rails.svg?branch=master" alt="Build Status" /></a>
+<a href="https://codeclimate.com/github/cucumber/cucumber-rails"><img src="https://codeclimate.com/github/cucumber/cucumber-rails.svg" alt="Code Climate" /></a>
+<a href="https://gemnasium.com/Kosmas/cucumber-rails"><img src="https://gemnasium.com/Kosmas/cucumber-rails.svg" alt="Dependency Status" /></a>
+<a href="https://www.pullreview.com/github/cucumber/cucumber-rails/reviews/master"><img src="https://www.pullreview.com/github/cucumber/cucumber-rails/badges/master.svg?" alt="PullReview stats" /></a></p>
+
+<p>Cucumber-Rails brings Cucumber to Rails 3.x and 4.x. For Rails 2.3.x support, see the <a href="https://github.com/cucumber/cucumber-rails/tree/rails-2.3.x">rails-2.3.x branch</a>.</p>
+
+<h2>Installation</h2>
+
+<p>Before you can use the generator, add the gem to your project's Gemfile as follows:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_group'>group</span> <span class='symbol'>:test</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cucumber-rails</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:require</span> <span class='op'>=&gt;</span> <span class='kw'>false</span>
+  <span class='comment'># database_cleaner is not required, but highly recommended
+</span>  <span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>database_cleaner</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span>
+</code></pre>
+
+<p>Then install it by running:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_install'>install</span>
+</code></pre>
+
+<p>Learn about the various options:</p>
+
+<pre class="code ruby"><code class="ruby">rails generate cucumber:install --help
+</code></pre>
+
+<p>Finally, bootstrap your Rails app, for example:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rails'>rails</span> <span class='id identifier rubyid_generate'>generate</span> <span class='label'>cucumber:</span><span class='id identifier rubyid_install'>install</span>
+</code></pre>
+
+<h2>Running Cucumber</h2>
+
+<p>With Rake:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rake'>rake</span> <span class='id identifier rubyid_cucumber'>cucumber</span>
+</code></pre>
+
+<p>Without Rake:</p>
+
+<pre class="code ruby"><code class="ruby">[bundle exec] cucumber
+</code></pre>
+
+<h2>Configuration options</h2>
+
+<p>By default, cucumber-rails runs <code>DatabaseCleaner.start</code> and <code>DatabaseCleaner.clean</code> before and after your scenarios. You can disable this behaviour like so:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='comment'># features/support/env.rb
+</span><span class='comment'># ...
+</span><span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>Rails</span><span class='op'>::</span><span class='const'>Database</span><span class='period'>.</span><span class='id identifier rubyid_autorun_database_cleaner'>autorun_database_cleaner</span> <span class='op'>=</span> <span class='kw'>false</span>
+</code></pre>
+
+<h2>Upgrading from a previous version</h2>
+
+<p>When upgrading from a previous version it is recommended that you rerun:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rails'>rails</span> <span class='id identifier rubyid_generate'>generate</span> <span class='label'>cucumber:</span><span class='id identifier rubyid_install'>install</span>
+</code></pre>
+
+<h2>Bugs and feature requests</h2>
+
+<p>The <em>only</em> way to have a bug fixed or a new feature accepted is to describe it with a Cucumber feature. Let's say you think you have found a bug in the cucumber:install generator. Fork this project, clone it to your workstation and check out a branch with a descriptive name:</p>
+
+<pre class="code ruby"><code class="ruby">git clone git@github.com:you/cucumber-rails.git
+git checkout -b bug-install-generator
+</code></pre>
+
+<p>Start by making sure you can run the existing features. Now, create a feature that demonstrates what's wrong. See the existing features for examples. When you have a failing feature that reproduces the bug, commit, push and send a pull request. Someone from the Cucumber-Rails team will review it and hopefully create a fix.</p>
+
+<p>If you know how to fix the bug yourself, make a second commit (after committing the failing feature) before you send the pull request.</p>
+
+<h3>Setting up your environment</h3>
+
+<p>I strongly recommend rvm and ruby 1.9.3. When you have that, cd into your cucumber-rails repository and:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_bundler'>bundler</span>
+<span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_install'>install</span>
+</code></pre>
+
+<h3>Running all tests</h3>
+
+<p>With all dependencies installed, all specs and features should pass:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_rake'>rake</span>
+</code></pre>
+
+<h3>Running Appraisal suite</h3>
+
+<p>In order to test against multiple versions of key dependencies, the <a href="https://github.com/thoughtbot/appraisal">Appraisal</a> is used to generate multiple gemfiles, stored in the <code>gemfiles/</code> directory. Normally these will only run on Travis; however, if you want to run the full test suite against all gemfiles, run the following commands:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_appraisal'>appraisal</span> <span class='id identifier rubyid_install'>install</span>
+<span class='id identifier rubyid_appraisal'>appraisal</span> <span class='id identifier rubyid_rake'>rake</span> <span class='id identifier rubyid_test'>test</span>
+</code></pre>
+
+<p>To run the suite against a named gemfile, use the following:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_appraisal'>appraisal</span> <span class='id identifier rubyid_rails_4_1'>rails_4_1</span> <span class='id identifier rubyid_rake'>rake</span> <span class='id identifier rubyid_test'>test</span>
+</code></pre>
+
+<p>To remove and rebuild the different gemfiles (for example, to update a rails version or its dependencies), use the following:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_appraisal'>appraisal</span> <span class='id identifier rubyid_install'>install</span>
+</code></pre>
+
+<h3>Adding dependencies</h3>
+
+<p>To support the multiple-gemfile testing, when adding a new dependency the following rules apply:</p>
+
+<ol>
+<li>If it's a runtime dependency of the gem, add it to the gemspec</li>
+<li>If it's a primary development dependency, add it to the gemspec</li>
+<li>If it's a dependency of a generated rails app in a test, add it to the Gemfile (for local test runs) and each appraisal section (if necessary).</li>
+</ol>
+
+
+<p>For example, rspec is a primary development dependency, so it lives in the gemspec. By contrast, coffee-rails is a dependency of apps generated with rails 3.1 and 3.2, so lives in the main Gemfile and the rails 3.1 and 3.2 appraisal sections.</p>
+
+<h3>NOTE</h3>
+
+<p>If you get an error while trying to run the tests locally, similar to the one below:</p>
+
+<pre class="code ruby"><code class="ruby">Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
+</code></pre>
+
+<p>you would need to install a javascript runtime.</p>
+
+<p>You can do that in ubuntu by using:</p>
+
+<pre class="code ruby"><code class="ruby">sudo apt-get install nodejs
+</code></pre>
+</div></div>
+
+    <div id="footer">
+  Generated on Mon Jul 25 09:30:40 2016 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.3 (ruby-2.3.1).
+</div>
+
+  </body>
+</html>
