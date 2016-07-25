@@ -3,6 +3,7 @@ require 'yard/rake/yardoc_task'
 
 SITE_DIR = File.expand_path(File.dirname(__FILE__) + '/../cucumber.github.com')
 API_DIR = File.join(SITE_DIR, 'api', 'cucumber-rails', 'ruby', 'yardoc')
+VERSION = Gem::Specification.find_by_name('cucumber-rails').version.to_s
 
 namespace :api do
   file :dir do
@@ -25,7 +26,7 @@ namespace :api do
   task :release do
     Dir.chdir(SITE_DIR) do
       sh('git add .')
-      sh("git commit -m 'Update API docs for cucumber-rails v#{cucumber-rails::VERSION}'")
+      sh("git commit -m 'Update API docs for cucumber-rails v#{VERSION}'")
       sh('git push origin master')
     end
   end
